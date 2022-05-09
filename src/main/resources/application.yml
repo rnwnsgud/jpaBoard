@@ -1,4 +1,8 @@
 spring:
+
+  messages:
+    basename: errors
+
   datasource:
     url: jdbc:h2:tcp://localhost/~/jpaBoard
     username: sa
@@ -7,12 +11,13 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     properties:
       hibernate:
         #        show_sql: true print 로 찍어내는거, logging 으로 해야됨
         format_sql: true
         default_batch_fetch_size: 100
+
 
 logging:
   level:
